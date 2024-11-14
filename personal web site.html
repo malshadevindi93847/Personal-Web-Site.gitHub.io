@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio Website - Easy Tutorials</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css"/>
     <script src="https://kit.fontawesome.com/f146879b06.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -15,8 +15,8 @@
             <img src="images/website2.png" class="website2">
             <ul id="sidemeu">
                 <li><a href="#header">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Services">Services</a></li>
                 <li><a href="#Portfolio">Portfolio</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <i class="fas fa-xmark" onclick="closemenu()"></i>
@@ -26,7 +26,7 @@
          <div class="header-text">
             <p>Freelancer</p>
             <h1>Hi,I'm <span>Malsha</span><br>From Sri Lanka</h1>
-            
+                       
             </div>
          </div>
     </div>
@@ -36,7 +36,7 @@
     <div class="container">
         <div class="row">
             <div class="about-col-1">
-                <img src="images/aboutme3.jpg">
+                <img src="images/Malsha_devindi.jpg">
 
             </div>
             <div class="about-col-2">
@@ -48,10 +48,16 @@
                       </p>
                       </div>
                 <div class="tab-titles">
+                    
+
+
+
                     <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
                     <p class="tab-links" onclick="opentab('experience')">Experience</p>
                     <p class="tab-links" onclick="opentab('education')">Education</p>
+                    
                 </div>
+
                 <div class="tab-contents active-tab" id="skills">
                     <ul>
                         <li><span>Graphics & Design</span><br>Designing T-shirts/logo/Book design</li>
@@ -155,7 +161,7 @@
                    <a href="https://www.instagram.com/devi_devi_.02/profilecard/?igsh=dDM3c2l2eHZmYW9s"><i class="fa-brands fa-instagram"></i></a> 
                    <a href="https://www.linkedin.com/in/malsha=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa-brands fa-linkedin"></i></a> 
                 </div>
-                <a href="images/my.cv.pdf" class="btn btn2">Download CV</a>
+                <a href="my.cv.pdf" class="btn btn2">Download CV</a>
             </div>
             <divclass="contact-right">
                 <form name="submit-to-google-sheet">
@@ -175,26 +181,6 @@
     
 </div>
 
-
-
-<script>
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
-
-    function opentab(tabname){
-        for(tablink of tablinks){
-            tablink.classList.remove("active-link");
-        }
-        for(tabcontent of tabcontents){
-            tabcontent.classList.remove("active-tab");
-        }
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab");
-
-
-    }
-
-</script>
 <script>
     var sidemeu = document.getElementById("sidemenu");
 
@@ -207,6 +193,7 @@
 </script>
 <script>
     const scriptURL = 'https://script.google.com/macros/s/AKfycbxi-rtCiYiVsOfv7Fv5jWgyXWq91AxAJPJCxRAmi3_8cNZso4Kqa3foy1ZHTpD9PfDd/exec'
+    
     const form = document.forms['submit-to-google-sheet']
     const msg = document.getElementById("msg")
   
@@ -223,6 +210,20 @@
         .catch(error => console.error('Error!', error.message))
     })
   </script>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
 
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
 </body>
 </html>
